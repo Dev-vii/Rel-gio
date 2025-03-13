@@ -1,6 +1,14 @@
-let agora = new Date()
-let hora = agora.getHours()
-let min = agora.getMinutes()
-let seg = agora.getSeconds()
+const hr = document.getElementById('horas')
+const min = document.getElementById('minutos')
+const seg = document.getElementById('segundos')
 
-document.getElementById('horario').innerHTML = (`${hora} : ${min} : ${seg}`)
+const relogio = setInterval(function time(){
+    let agora = new Date()
+    let hora = agora.getHours
+    let minuto = agora.getMinutes
+    let segundo = agora.getSeconds
+
+    hr.textContent = hora
+    min.textContent = minuto
+    seg.textContent = segundo
+})
